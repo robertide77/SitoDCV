@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Scolastico</title>
+    <style>
+        :root {
+            --primary: #2563eb;  /* Blu moderno */
+            --secondary: #1e40af; 
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --accent: #f59e0b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background: var(--secondary);
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        h1, h2, h3 {
+            color: var(--primary);
+        }
+        
+        h2 {
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        
+        h3 {
+            margin-top: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        h4 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        ul {
+            padding-left: 1.2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            border-left: 3px solid var(--accent);
+        }
+
+        .stat-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .conclusion {
+            background-color: #fff7ed;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .tool-card {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card h4 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        .code-description {
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #4b5563;
+        }
+
+        .stats-result {
+            background-color: #f0fdf4;
+            padding: 1rem;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-top: 1rem;
+            border-left: 3px solid #10b981;
+        }
+
+        .graph-info {
+            background-color: #f5f3ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #8b5cf6;
+        }
+
+        .graph-info h4 {
+            color: #6d28d9;
+            margin-top: 0;
+        }
+
+        .graph-steps {
+            background-color: #ecfdf5;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .graph-steps ol {
+            padding-left: 1.5rem;
+        }
+
+        .graph-steps li {
+            margin-bottom: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Il Mio Portfolio</h1>
+        <p>Roberto Salsano | 5A Informatica</p>
+        <p>I.I.S. Della Corte - Vanvitelli</p>
+    </header>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Chi Sono</a>
+        <a href="#projects">Progetti</a>
+        <a href="#cybersecurity">Cybersecurity</a>
+        <a href="#poesia">La capra</a>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>Benvenuto</h2>
+            <p>Questo è il mio portfolio scolastico dove presento il mio percorso e i progetti realizzati durante gli studi.</p>
+        </section>
+        
+        <section id="about">
+            <h2>Chi Sono</h2>
+            <p>Ciao! Sono Roberto Salsano, studente appassionato di informatica.</p>
+            <p>I miei interessi:</p>
+            <ul>
+                <li>Sviluppo software e programmazione</li>
+                <li>Tecnologie emergenti</li>
+                <li>Sport e attività fisica</li>
+                <li>Miglioramento continuo</li>
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>Progetti Scolastici</h2>
+            <p>Qui troverai i progetti che ho realizzato durante il mio percorso formativo.</p>
+            
+            <img src="DataBase.jpg">
+
+            <h3>Progetto Sicurezza Informatica 2024</h3>
+            <p>Database per il monitoraggio degli attacchi hardware:</p>
+            <pre>
+-- Crea il database
+CREATE DATABASE IF NOT EXISTS SicurezzaInformatica2024;
+
+-- Usa il database
+USE SicurezzaInformatica2024;
+
+-- Crea la tabella
+CREATE TABLE Attacchi_Hardware_2024 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    mese VARCHAR(10),
+    numero_attacchi INT
+);
+            </pre>
+        </section>
+
+        <section id="cybersecurity">
+            <h2>Analisi Cybersecurity 2024</h2>
+            
+            <!-- Sezioni precedenti rimaste invariate ... -->
+
+            <h3>Tipi di Grafici per l'Analisi Dati</h3>
+
+            <div class="graph-info">
+                <h4>Grafico a Torta</h4>
+                <p><strong>Caratteristiche principali:</strong></p>
+                <ul>
+                    <li>È composto da un cerchio suddiviso in spicchi, ognuno dei quali rappresenta una categoria o una classe</li>
+                    <li>La dimensione di ogni spicchio è proporzionale alla frequenza relativa (o percentuale) della categoria che rappresenta</li>
+                    <li>La somma di tutti gli angoli degli spicchi è 360°, che rappresenta il 100% del totale</li>
+                </ul>
+                
+                <div class="graph-steps">
+                    <p><strong>Come si costruisce:</strong></p>
+                    <ol>
+                        <li>Si calcolano le frequenze relative (percentuali) di ciascuna categoria</li>
+                        <li>Ogni percentuale viene convertita in gradi usando la proporzione: 
+                            <br><code>gradi = (percentuale × 360) / 100</code></li>
+                        <li>Si disegna un cerchio e si tracciano gli spicchi con gli angoli calcolati</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="graph-info">
+                <h4>Grafico a Barre</h4>
+                <p><strong>Caratteristiche principali:</strong></p>
+                <ul>
+                    <li>Ogni barra rappresenta una categoria</li>
+                    <li>L'altezza della barra è proporzionale alla frequenza assoluta, relativa o percentuale della categoria</li>
+                    <li>Le barre sono separate tra loro, proprio per evidenziare che si tratta di dati discreti (cioè non continui)</li>
+                </ul>
+                
+                <div class="graph-steps">
+                    <p><strong>Come si legge:</strong></p>
+                    <ol>
+                        <li><strong>Asse orizzontale (x):</strong> riporta le categorie o classi (es. tipi di frutta, voti, colori...)</li>
+                        <li><strong>Asse verticale (y):</strong> indica la frequenza o valore numerico associato a ciascuna categoria</li>
+                        <li>Per leggere il grafico, basta osservare l'altezza di ciascuna barra e confrontarla con la scala sull'asse y</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>Analisi Statistiche e Grafici</h3>
+
+            <img src="GraficoAttacchiInformatici.jpg">
+
+            <div class="code-description">
+                <p>Codice Python per generare statistiche e grafici sugli attacchi informatici mensili nel settore Software/Hardware:</p>
+            </div>
+            
+            <pre>
+import matplotlib.pyplot as plt
+import statistics
+import random
+
+# Simulazione: attacchi mensili nel 2024 nel settore Software/Hardware
+attacchi_mensili = [random.randint(55, 75) for _ in range(12)]
+
+# Calcoli statistici
+media = statistics.mean(attacchi_mensili)
+mediana = statistics.median(attacchi_mensili)
+try:
+    moda = statistics.mode(attacchi_mensili)
+except statistics.StatisticsError:
+    moda = "Nessuna moda (tutti i valori unici o multimodali)"
+
+print(f"Media: {media:.2f}")
+print(f"Mediana: {mediana}")
+print(f"Moda: {moda}")
+
+# Nomi dei mesi
+mesi = [
+    "Gen", "Feb", "Mar", "Apr", "Mag", "Giu",
+    "Lug", "Ago", "Set", "Ott", "Nov", "Dic"
+]
+
+# Grafico a barre
+plt.figure(figsize=(10, 6))
+plt.bar(mesi, attacchi_mensili, color='steelblue')
+plt.title("Attacchi informatici mensili - Settore Software/Hardware (2024)")
+plt.xlabel("Mese")
+plt.ylabel("Numero di attacchi")
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+            </pre>
+
+            <div class="stats-result">
+                <p><strong>Risultati simulati:</strong></p>
+                <p>Media: 64.25</p>
+                <p>Mediana: 64.5</p>
+                <p>Moda: 68</p>
+            </div>
+            <br><br>
+
+            <img src="NumeroAttacchi.jpg" height="430" width="930">
+
+            <!-- Aggiungi questo codice nella sezione Cybersecurity, prima della conclusione -->
+<div class="crypto-card">
+    <h3>DES (Data Encryption Standard)</h3>
+    
+    <h4>Cos'è il DES?</h4>
+    <p>Il DES è un algoritmo di cifratura simmetrica a blocchi, sviluppato negli anni '70, usato per cifrare e decifrare dati. È "simmetrico" perché usa la stessa chiave per cifrare e decifrare.</p>
+    
+    <h4>Caratteristiche principali del DES</h4>
+    <table class="simple-table">
+        <tr><th>Caratteristica</th><th>Valore</th></tr>
+        <tr><td>Tipo</td><td>Cifratura simmetrica a blocchi</td></tr>
+        <tr><td>Lunghezza blocco</td><td>64 bit</td></tr>
+        <tr><td>Lunghezza chiave</td><td>56 bit effettivi (più 8 bit di parità = 64 bit totali)</td></tr>
+        <tr><td>Numero di round</td><td>16</td></tr>
+        <tr><td>Modalità</td><td>Elettronica (ECB, CBC, ecc.)</td></tr>
+    </table>
+    
+    <h4>Funzionamento passo-passo</h4>
+    
+    <div class="info-box">
+        <h5>1. Input del DES</h5>
+        <p>Messaggio in chiaro di 64 bit (diviso in blocchi se il messaggio è lungo).</p>
+        <p>Chiave di 64 bit, di cui solo 56 sono effettivi.</p>
+    </div>
+    
+    <div class="info-box">
+        <h5>2. Permutazione iniziale (IP)</h5>
+        <p>Si applica una permutazione fissa ai 64 bit del messaggio. Non cambia il contenuto, solo l'ordine dei bit.</p>
+    </div>
+    
+    <div class="info-box">
+        <h5>3. Dividi il blocco</h5>
+        <p>Il blocco è diviso in due parti:</p>
+        <ul>
+            <li>L0 = primi 32 bit</li>
+            <li>R0 = ultimi 32 bit</li>
+        </ul>
+    </div>
+    
+    <div class="info-box">
+        <h5>4. 16 Round Feistel</h5>
+        <p>Dopo 16 round, si scambiano L e R e si applica la permutazione inversa (IP⁻¹).</p>
+        <p>Si ottiene così il blocco cifrato di 64 bit.</p>
+    </div>
+    
+    <h4>In sintesi:</h4>
+    <div class="flow">
+        <p>Messaggio (64 bit)</p>
+        <p>↓</p>
+        <p>Permutazione iniziale (IP)</p>
+        <p>↓</p>
+        <p>Dividi in L0 e R0</p>
+        <p>↓</p>
+        <p>16 Round Feistel (con sottochiavi K1...K16)</p>
+        <p>↓</p>
+        <p>Swap (L16, R16)</p>
+        <p>↓</p>
+        <p>Permutazione Inversa (IP⁻¹)</p>
+        <p>↓</p>
+        <p>Blocco cifrato (64 bit)</p>
+    </div>
+    
+    <h4>In ambito TPSIT</h4>
+    <p>Nel contesto scolastico TPSIT, il DES viene studiato per:</p>
+    <ul>
+        <li>Capire come funziona la crittografia simmetrica</li>
+        <li>Analizzare un algoritmo a blocchi con una struttura Feistel</li>
+        <li>Approfondire le tecniche di cifratura/decifratura</li>
+        <li>Vedere esempi pratici (magari con codice in C, Java o Python)</li>
+    </ul>
+    
+    <h4>Vantaggi e Svantaggi</h4>
+    <table class="simple-table">
+        <tr><th>Vantaggi</th><th>Svantaggi</th></tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Semplice da implementare</li>
+                    <li>Rapido su hardware</li>
+                    <li>Base per il 3DES</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Chiave troppo corta (56 bit)</li>
+                    <li>Vulnerabile a brute-force</li>
+                    <li>Non sicuro per uso moderno</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    /* Stili minimi per non interferire con il resto */
+    .crypto-card {
+        background: white;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .simple-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+    }
+    .simple-table th, .simple-table td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem;
+    }
+    .simple-table th {
+        background-color: #f0f7ff;
+    }
+    .info-box {
+        background: #f8fafc;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-left: 3px solid #2563eb;
+    }
+    .flow {
+        text-align: center;
+        font-family: monospace;
+        margin: 1.5rem 0;
+    }
+    .flow p {
+        margin: 0.5rem 0;
+    }
+</style>
+
+<!-- Aggiungi questo codice nella sezione Cybersecurity, prima della conclusione -->
+<div class="english-card">
+    <h3>Digital Security (Informatica & Inglese)</h3>
+    
+    <p>La sicurezza digitale, o <strong>digital security</strong>, è l'insieme di pratiche, strumenti e tecnologie utilizzati per proteggere dati, dispositivi e reti informatiche da accessi non autorizzati, attacchi informatici e perdita di informazioni.</p>
+    
+    <div class="info-box">
+        <h4>Nel mondo dell'informatica, la sicurezza digitale è fondamentale per garantire che:</h4>
+        <ul>
+            <li>I dati personali (<strong>personal data</strong>) siano protetti</li>
+            <li>Le reti (<strong>networks</strong>) siano sicure</li>
+            <li>I sistemi operativi (<strong>operating systems</strong>) non vengano compromessi</li>
+            <li>Le informazioni sensibili (<strong>sensitive information</strong>) non vengano rubate o danneggiate</li>
+        </ul>
+    </div>
+    
+    <div class="info-box">
+        <h4>Minacce comuni (Common Threats):</h4>
+        <ul>
+            <li><strong>Malware</strong>: software dannoso come virus o trojan</li>
+            <li><strong>Phishing</strong>: tecniche per rubare dati tramite e-mail false</li>
+            <li><strong>Hacking</strong>: accessi non autorizzati a sistemi</li>
+            <li><strong>Data breach</strong>: perdita o furto di dati</li>
+        </ul>
+        <div class="english-example">
+            <p>Esempio in inglese:</p>
+            <blockquote>"Phishing is a common attack where cybercriminals trick users into giving away sensitive information such as passwords or credit card numbers."</blockquote>
+        </div>
+    </div>
+    
+    <div class="info-box">
+        <h4>Strumenti di protezione (Protection Tools):</h4>
+        <ul>
+            <li>Antivirus software</li>
+            <li>Firewalls</li>
+            <li>Encryption (crittografia)</li>
+            <li>Multi-factor authentication (MFA)</li>
+        </ul>
+        <div class="english-example">
+            <p>Esempio in inglese:</p>
+            <blockquote>"Using strong passwords and enabling multi-factor authentication helps keep your accounts secure."</blockquote>
+        </div>
+    </div>
+    
+    <div class="info-box">
+        <h4>Importanza dell'inglese in informatica:</h4>
+        <p>Nel campo dell'informatica, molte parole tecniche derivano direttamente dall'inglese. Conoscere il lessico in inglese è importante perché:</p>
+        <ul>
+            <li>La maggior parte della documentazione tecnica è in inglese</li>
+            <li>I professionisti IT lavorano spesso in ambienti internazionali</li>
+            <li>I comandi, le impostazioni dei software e le guide di sicurezza sono quasi sempre in inglese</li>
+        </ul>
+    </div>
+    
+    <div class="conclusion-box">
+        <h4>Conclusione:</h4>
+        <p>La sicurezza digitale è essenziale per vivere e lavorare nel mondo digitale in modo protetto. Conoscere la terminologia in inglese permette di accedere a risorse globali e di comprendere meglio le minacce e le soluzioni in ambito informatico.</p>
+    </div>
+</div>
+
+<style>
+    /* Stili specifici per questa sezione */
+    .english-card {
+        background: white;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .english-card h3 {
+        color: #2563eb;
+        border-bottom: 2px solid #f59e0b;
+        padding-bottom: 0.5rem;
+    }
+    .info-box {
+        background: #f8fafc;
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+        border-left: 4px solid #2563eb;
+        border-radius: 0 6px 6px 0;
+    }
+    .english-example {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #f0f7ff;
+        border-radius: 6px;
+    }
+    .english-example blockquote {
+        margin: 0.5rem 0 0;
+        padding-left: 1rem;
+        border-left: 3px solid #1e40af;
+        font-style: italic;
+        color: #1e293b;
+    }
+    .conclusion-box {
+        background: #fff7ed;
+        padding: 1.2rem;
+        margin-top: 1.5rem;
+        border-left: 4px solid #f59e0b;
+        border-radius: 0 6px 6px 0;
+    }
+</style>
+
+<!-- Aggiungi questa sezione dove preferisci nel tuo sito -->
+<section id="poesia">
+    <h2>La capra di Umberto Saba (1911)</h2>
+    
+    <div class="poesia-testo">
+        <blockquote>
+            <p>Ho parlato a una capra.<br>
+            Era sola sul prato, era legata.<br>
+            Sazia d'erba, bagnata<br>
+            alla pioggia, belava.</p>
+            
+            <br>
+            
+            <p>Quell'urlo è fratello<br>
+            all'urlo eterno che esprime<br>
+            ciò che non cambia:<br>
+            il dolore.</p>
+        </blockquote>
+    </div>
+    
+    <div class="poesia-spiegazione">
+        <h3>Spiegazione della poesia</h3>
+        <p>La poesia è breve ma intensa, e carica di significati universali e simbolici.</p>
+        
+        <div class="poesia-punto">
+            <h4>1. Inizio semplice e concreto</h4>
+            <blockquote>"Ho parlato a una capra."</blockquote>
+            <p>Saba inizia con un gesto banale, ma profondo: parla a un animale.<br>
+            Non è una scena bucolica, ma triste: la capra è sola e legata.</p>
+        </div>
+        
+        <div class="poesia-punto">
+            <h4>2. L'immagine della capra</h4>
+            <blockquote>"Era sola sul prato, era legata."</blockquote>
+            <p>La capra rappresenta l'essere vivente indifeso.<br>
+            È prigioniera e sottomessa, come lo è l'uomo nel dolore.</p>
+        </div>
+        
+        <div class="poesia-punto">
+            <h4>3. Il belato e il dolore</h4>
+            <blockquote>"belava."</blockquote>
+            <p>Il verso della capra diventa simbolo del dolore umano.<br>
+            È un urlo di sofferenza, senza parole, ma universale.</p>
+        </div>
+        
+        <div class="poesia-punto">
+            <h4>4. Il messaggio universale</h4>
+            <blockquote>"Quell'urlo è fratello all'urlo eterno [...] il dolore."</blockquote>
+            <p>Saba riconosce nel lamento dell'animale lo stesso dolore che prova l'umanità.<br>
+            Il dolore è eterno e uguale per tutti: uomini, animali, individui soli o popoli interi.</p>
+        </div>
+    </div>
+    
+    <div class="poesia-collegamento">
+        <h3>Collegamento con la Seconda Guerra Mondiale</h3>
+        <p>Sebbene la poesia sia scritta nel 1911, anticipa un sentimento che sarà fortissimo negli anni della Seconda Guerra Mondiale.</p>
+        
+        <div class="poesia-punto">
+            <h4>1. Sofferenza universale</h4>
+            <p>La guerra ha portato dolore, prigionia, fame, morte, come il belato della capra: un grido senza voce che accomuna i sofferenti.</p>
+        </div>
+        
+        <div class="poesia-punto">
+            <h4>2. Empatia verso i deboli</h4>
+            <p>Come Saba ha compassione per la capra, così durante e dopo la guerra molti intellettuali si sono chiesti come dare voce alle vittime mute, agli emarginati, ai perseguitati (pensiamo ai campi di concentramento).</p>
+        </div>
+        
+        <div class="poesia-punto">
+            <h4>3. Saba e l'ebraismo</h4>
+            <p>Umberto Saba era di origine ebraica. Durante il periodo fascista e la guerra, fu costretto a nascondersi per sfuggire alle leggi razziali.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Stili per la sezione poesia */
+    #poesia {
+        background: white;
+        padding: 2rem;
+        margin: 2rem auto;
+        max-width: 800px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .poesia-testo blockquote {
+        font-style: italic;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #1e293b;
+        border-left: 3px solid #2563eb;
+        padding-left: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .poesia-spiegazione, .poesia-collegamento {
+        margin: 2rem 0;
+    }
+    
+    .poesia-punto {
+        margin: 1.5rem 0;
+        padding-left: 1rem;
+        border-left: 2px solid #f59e0b;
+    }
+    
+    .poesia-punto blockquote {
+        font-style: italic;
+        color: #4b5563;
+        margin: 0.5rem 0;
+        padding-left: 1rem;
+    }
+    
+    .poesia-punto h4 {
+        color: #1e40af;
+        margin-bottom: 0.5rem;
+    }
+</style>
+            <div class="conclusion">
+                <h3>Conclusione</h3>
+                <p>Gli attacchi informatici ai settori hardware e software hanno causato danni economici significativi alle aziende italiane nel 2024, con costi diretti elevati e impatti negativi sulla reputazione e sul valore di mercato. È fondamentale che le imprese investano in misure di sicurezza informatica robuste e aggiornate per mitigare questi rischi.</p>
+                <p>Questi strumenti lavorano insieme per:</p>
+                <ul>
+                    <li>Ridurre la superficie d'attacco</li>
+                    <li>Rilevare e fermare gli attacchi prima che si diffondano</li>
+                    <li>Dare agli amministratori visibilità e controllo</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Roberto Salsano - Portfolio Scolastico</p>
+    </footer>
+</body>
+</html>
